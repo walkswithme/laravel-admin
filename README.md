@@ -1,27 +1,23 @@
 # WWM Laravel Admin
 
-This admin package provides a qucik start to Laravel projects its using Laravel 6.* LTS version.
+This admin package provides a qucik start to Laravel projects its using <b>Laravel 6.* LTS version</b>.
+
 This package formerly known as Laflux platform its built on Laravel 5.3 , this can be considered as upgrade to the Laflux platoform as well, but not all the packages just admin module only. 
 
 This package provide a permission manager as well  for FREE.
 
 ## Features
 
-Admin Module with separate Auth Guard so you can manage front and back end session separately.
+* Admin Module with separate Auth Guard so you can manage front and back end session separately.
 
-Access controll logic is included
+* Access controll logic is included
 
-User Management
+* User Management
 
-Groups/Roles Management
+* Groups/Roles Management
 
-Basic Site Profile and Meta data details
+* Basic Site Profile and Meta data details
 
-
-
-## Login Credentials
-
-admin@wwm.com, Password : 123456.
 
 ### Prerequisites
 
@@ -43,16 +39,23 @@ php artisan migrate
 php artisan db:seed
 composer dumpautoload -o
 ```
-## Permissions
+### Permissions
 
 Uploading profile and site logo you may need to set write permission for 
  `public/packages/extensionsvalley/dashboard/images/` folder
 
-## Deployment
+
+### Login Credentials
+
+yourdomain.com/admin or localhost/folder/public/admin
+
+admin@wwm.com, Password : 123456.
+
+### Deployment
 
 You can deploy this laravel admin template anywhere.
 
-## Built With
+### Built With
 
 * [LARAVEL](https://laravel.com/) - The web framework used
 * [COMPOSER](https://getcomposer.org/) - Dependency Management
