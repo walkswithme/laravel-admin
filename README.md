@@ -35,6 +35,7 @@ PHP and Laravel Knowledge
 
 Migrations and Seeders initializations
 ```
+composer install
 php artisan migrate
 php artisan db:seed
 composer dumpautoload -o
@@ -47,7 +48,7 @@ Uploading profile and site logo you may need to set write permission for
 
 ### Login Credentials
 
-yourdomain.com/admin or localhost/folder/public/admin
+`yourdomain.com/admin` or `localhost/folder/public/admin`
 
 admin@wwm.com, Password : 123456.
 
