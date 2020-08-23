@@ -99,7 +99,7 @@
                                 @endif
                                 {{\WebConf::get('site_name')}}</h1>
                             <p> {{\WebConf::get('copy_right')}} <br/> Powered by <b><a
-                                            href="http://extensionsvalley.com">Extensions Valley</a></b></p>
+                                            href="http://walkswithme.net/contact-me">WWM Laravel Admin</a></b></p>
                         </div>
                     </div>
                 </form>
