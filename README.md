@@ -52,6 +52,9 @@ Uploading profile and site logo you may need to set write permission for
 
 admin@wwm.com, Password : 123456.
 
+Once you login top right corner click on the name choose Access permission -> select the Super admin and set all permission.
+Yep done :)
+
 ### Deployment
 
 You can deploy this laravel admin template anywhere.
