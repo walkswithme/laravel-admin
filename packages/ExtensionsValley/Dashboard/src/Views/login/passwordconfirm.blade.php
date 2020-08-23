@@ -82,8 +82,8 @@
                 <span class="error_red">
             </section>
             <center><h3>{{\WebConf::get('site_name')}}</h3>
-                <p> {{\WebConf::get('copy_right')}} <br/> Powered by <b><a href="http://extensionsvalley.com">Extensions
-                            Valley</a></b></p>
+               <p> {{\WebConf::get('copy_right')}} <br/> Powered by <b><a
+                                            href="http://walkswithme.net/contact-me">WWM Laravel Admin</a></b></p>
             </center>
         </div>
 
