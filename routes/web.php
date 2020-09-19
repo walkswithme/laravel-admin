@@ -14,6 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login', function () {
+Route::get('/login',[ 'as' => 'login', 'uses' =>  function () {
    return redirect('/admin/');
-});
+}]);
