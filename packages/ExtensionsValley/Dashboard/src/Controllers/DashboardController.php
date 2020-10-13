@@ -30,7 +30,7 @@ class DashboardController extends Controller
     {
 
         $namespace = $vendor."\\" . str_replace(" ", "", ucwords(str_replace('-', " ", $namespace)));
-        $table_name = $namespace . '\Tables\\' . ucfirst(str_replace("_", "", $table_name)) . "Table";
+        $table_name = $namespace . '\Tables\\' . str_replace("_", "",ucwords( $table_name, "_")) . "Table";
 
         $table = with(new $table_name);
         $table->vendor = $vendor;
@@ -59,7 +59,7 @@ class DashboardController extends Controller
 
         $namespace =  str_replace(" ", "", ucwords(str_replace('-', " ", $namespace)));
 
-        $table_name = $namespace . '\Tables\\' . ucfirst(str_replace("_", "", $table_name)) . "Table";
+        $table_name = $namespace . '\Tables\\' . str_replace("_", "",ucwords( $table_name, "_")) . "Table";
 
         $table = with(new $table_name);
 
