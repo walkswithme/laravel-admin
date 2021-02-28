@@ -4,7 +4,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['admin', 'auth:admin']], fun
     Route::get('/dashboard', [
         'name' => 'Dashboard',
         'as' => 'extensionsvalley.admin.dashboard',
-        'uses' => 'ExtensionsValley\Dashboard\DashboardController@getDashboard',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\DashboardController@getDashboard',
     ]);
 
     /* Common routes for CRUD*/
@@ -13,7 +13,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['admin', 'auth:admin']], fun
         'middleware' => 'acl',
         'name' => 'View tables',
         'as' => 'extensionsvalley.admin.view.list',
-        'uses' => 'ExtensionsValley\Dashboard\DashboardController@getBasicView',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\DashboardController@getBasicView',
     ]);
     /* Common routes for CRUF */
 
@@ -22,7 +22,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['admin', 'auth:admin']], fun
     Route::any('{namespace}/list/{tables}/ajaxview', [
         'name' => 'View tables',
         'as' => 'extensionsvalley.admin.ajax.list',
-        'uses' => 'ExtensionsValley\Dashboard\DashboardController@getAjaxView',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\DashboardController@getAjaxView',
     ]);
 
     /* Common routes for Ajax Tables */
@@ -30,31 +30,31 @@ Route::group(['prefix' => 'admin', 'middleware' => ['admin', 'auth:admin']], fun
     Route::post('/actions', [
         'name' => 'Authendication',
         'as' => 'extensionsvalley.admin.actions',
-        'uses' => 'ExtensionsValley\Dashboard\DashboardController@getCommonAction',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\DashboardController@getCommonAction',
     ]);
 
     Route::get('/aclmanager', [
         'name' => 'ACL Manager',
         'as' => 'extensionsvalley.admin.permission',
-        'uses' => 'ExtensionsValley\Dashboard\ACLController@getIndex',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\ACLController@getIndex',
     ]);
 
     Route::get('/gensettings', [
         'name' => 'General Settings',
         'as' => 'extensionsvalley.admin.gensettings',
-        'uses' => 'ExtensionsValley\Dashboard\DashboardController@getSettings',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\DashboardController@getSettings',
     ]);
 
     Route::post('/setpermission', [
         'name' => 'ACL Manager',
         'as' => 'extensionsvalley.admin.setpermission',
-        'uses' => 'ExtensionsValley\Dashboard\ACLController@setPermission',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\ACLController@setPermission',
     ]);
 
     Route::post('/updatesettings', [
         'name' => 'update settings',
         'as' => 'extensionsvalley.admin.updatesettings',
-        'uses' => 'ExtensionsValley\Dashboard\DashboardController@updateSettings',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\DashboardController@updateSettings',
     ]);
 
 });

@@ -1,5 +1,5 @@
 <?php
-namespace ExtensionsValley\Dashboard;
+namespace ExtensionsValley\Dashboard\Controllers;
 
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Http\Request;

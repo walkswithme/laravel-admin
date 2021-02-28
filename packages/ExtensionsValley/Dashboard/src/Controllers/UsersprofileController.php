@@ -1,5 +1,5 @@
 <?php
-namespace ExtensionsValley\Dashboard;
+namespace ExtensionsValley\Dashboard\Controllers;
 
 use ExtensionsValley\Dashboard\Validators\UsersprofileValidation;
 use ExtensionsValley\Dashboard\Models\traits\DashboardTraits;

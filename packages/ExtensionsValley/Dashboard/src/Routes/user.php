@@ -5,58 +5,58 @@ Route::group(['prefix' => 'admin', 'middleware' => ['admin', 'auth:admin']], fun
         'middleware' => 'acl:add',
         'name' => 'Add User',
         'as' => 'extensionsvalley.admin.adduser',
-        'uses' => 'ExtensionsValley\Dashboard\UserController@addUser',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\UserController@addUser',
     ]);
     Route::get('/edituser/{id}', [
         'middleware' => 'acl:edit',
         'name' => 'Edit User',
         'as' => 'extensionsvalley.admin.edituser',
-        'uses' => 'ExtensionsValley\Dashboard\UserController@editUser',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\UserController@editUser',
     ]);
     Route::post('/saveuser', [
         'middleware' => 'acl:add',
         'name' => 'Save User',
         'as' => 'extensionsvalley.admin.saveuser',
-        'uses' => 'ExtensionsValley\Dashboard\UserController@saveUser',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\UserController@saveUser',
     ]);
     Route::post('/updateuser', [
         'middleware' => 'acl:edit',
         'name' => 'Save User',
         'as' => 'extensionsvalley.admin.updateuser',
-        'uses' => 'ExtensionsValley\Dashboard\UserController@updateUser',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\UserController@updateUser',
     ]);
     Route::get('/viewuser/{id}', [
         'middleware' => 'acl:view',
         'name' => 'View User',
         'as' => 'extensionsvalley.admin.viewuser',
-        'uses' => 'ExtensionsValley\Dashboard\UserController@viewUser',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\UserController@viewUser',
     ]);
     Route::get('/logout', [
         'name' => 'Log out user',
         'as' => 'extensionsvalley.admin.logout',
-        'uses' => 'ExtensionsValley\Dashboard\LoginController@logOut',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\LoginController@logOut',
     ]);
 
     Route::get('/profile', [
         'name' => 'Edit Usersprofile',
         'as' => 'extensionsvalley.admin.editusersprofile',
-        'uses' => 'ExtensionsValley\Dashboard\UsersprofileController@editUsersprofile',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\UsersprofileController@editUsersprofile',
     ]);
 
     Route::post('/updateusersprofile', [
         'name' => 'updateUsersprofile',
         'as' => 'extensionsvalley.admin.updateusersprofile',
-        'uses' => 'ExtensionsValley\Dashboard\UsersprofileController@updateUsersprofile',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\UsersprofileController@updateUsersprofile',
     ]);
     Route::post('/updateuserpassword', [
         'name' => 'Update User Password',
         'as' => 'extensionsvalley.admin.updateuserpassword',
-        'uses' => 'ExtensionsValley\Dashboard\UsersprofileController@updateUserpassword',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\UsersprofileController@updateUserpassword',
     ]);
     Route::post('/activatesubscriptions', [
         'name' => 'Activate Subscriptions',
         'as' => 'extensionsvalley.admin.activatesubscriptions',
-        'uses' => 'ExtensionsValley\Dashboard\UserController@activateSubscriptions',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\UserController@activateSubscriptions',
     ]);
 
 
@@ -70,7 +70,7 @@ Route::group(['prefix' => 'admin', 'before' => ['admin', 'csrf']], function () {
             'before' => 'throttle:3,60',
             'name' => 'Authendication',
             'as' => 'extensionsvalley.admin.auth',
-            'uses' => 'ExtensionsValley\Dashboard\LoginController@getAutendicate',
+            'uses' => 'ExtensionsValley\Dashboard\Controllers\LoginController@getAutendicate',
         ]);
     });
 
@@ -80,21 +80,21 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/login', [
         'name' => 'Login',
         'as' => 'extensionsvalley.admin.login',
-        'uses' => 'ExtensionsValley\Dashboard\LoginController@getIndex',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\LoginController@getIndex',
     ]);
 });
 Route::group(['prefix' => 'admin', 'middleware' => ['admin']], function () {
     Route::get('/', [
         'name' => 'Login',
         'as' => 'extensionsvalley.admin.login',
-        'uses' => 'ExtensionsValley\Dashboard\LoginController@getIndex',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\LoginController@getIndex',
     ]);
 });
 Route::get('password/reset/{token}', [
     'middleware' => 'admin',
     'name' => 'Password Reset',
     'as' => 'extensionsvalley.admin.passwordconfirm',
-    'uses' => 'ExtensionsValley\Dashboard\PasswordController@getResetConfirm',
+    'uses' => 'ExtensionsValley\Dashboard\Controllers\PasswordController@getResetConfirm',
 ]);
 
 /* User Reset Pasword routes */
@@ -102,29 +102,22 @@ Route::group(['prefix' => 'admin', 'middleware' => ['admin']], function () {
     Route::get('/password/reset', [
         'name' => 'Password Reset',
         'as' => 'extensionsvalley.admin.reset',
-        'uses' => 'ExtensionsValley\Dashboard\PasswordController@getResetView',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\PasswordController@getResetView',
     ]);
     Route::post('/password/email', [
         'name' => 'Password Reset',
         'as' => 'extensionsvalley.admin.passwordreset',
-        'uses' => 'ExtensionsValley\Dashboard\PasswordController@postResetData',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\PasswordController@postResetData',
     ]);
     Route::get('password/reset/{token}', [
         'name' => 'Password Reset',
         'as' => 'extensionsvalley.admin.passwordconfirm',
-        'uses' => 'ExtensionsValley\Dashboard\PasswordController@getResetConfirm',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\PasswordController@getResetConfirm',
     ]);
     Route::post('password/change/', [
         'name' => 'Password Reset',
         'as' => 'extensionsvalley.admin.changepassword',
-        'uses' => 'ExtensionsValley\Dashboard\PasswordController@postReset',
+        'uses' => 'ExtensionsValley\Dashboard\Controllers\PasswordController@postReset',
     ]);
 
-});
-Route::group(['middleware' => 'web'], function () {
-Route::get('/{slug}', [
-    'name' => 'Front Page',
-    'as' => 'extensionsvalley.web.getpage',
-    'uses' => 'ExtensionsValley\Pages\FrontPageController@getPage',
-]);
 });

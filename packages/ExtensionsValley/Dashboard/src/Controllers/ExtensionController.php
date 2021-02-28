@@ -1,5 +1,5 @@
 <?php
-namespace ExtensionsValley\Dashboard;
+namespace ExtensionsValley\Dashboard\Controllers;
 
 use ExtensionsValley\Dashboard\Validators\GroupValidation;
 use ExtensionsValley\Dashboard\Models\Extension;

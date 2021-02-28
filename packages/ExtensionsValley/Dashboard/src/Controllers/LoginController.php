@@ -1,5 +1,5 @@
 <?php
-namespace ExtensionsValley\Dashboard;
+namespace ExtensionsValley\Dashboard\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;

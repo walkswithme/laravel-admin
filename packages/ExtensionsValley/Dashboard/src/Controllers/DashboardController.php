@@ -1,5 +1,5 @@
 <?php
-namespace ExtensionsValley\Dashboard;
+namespace ExtensionsValley\Dashboard\Controllers;
 
 use ExtensionsValley\Dashboard\Models\traits\DashboardTraits;
 use Illuminate\Routing\Controller;
