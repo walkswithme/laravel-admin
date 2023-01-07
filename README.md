@@ -1,6 +1,6 @@
 # WWM Laravel Admin
 
-This admin package provides a qucik start to Laravel projects its using <b>Laravel 6.* LTS version</b>.
+This admin package provides a qucik start to Laravel projects its using <b>Laravel 8.x version</b>.
 
 This package formerly known as <b>Laflux platform</b> its built on Laravel 5.3 , this can be considered as upgrade to the Laflux platform as well, but not all the packages just admin module only. 
 
