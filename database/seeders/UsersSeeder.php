@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use ExtensionsValley\Dashboard\Models\User;
 use Illuminate\Database\Seeder;
 
